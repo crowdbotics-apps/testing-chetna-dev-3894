@@ -8,17 +8,16 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('home', '0002_load_initial_data'),
+        ("home", "0002_load_initial_data"),
     ]
 
     operations = [
-        migrations.RemoveField(
-            model_name='homepage',
-            name='body',
-        ),
+        migrations.RemoveField(model_name="homepage", name="body",),
         migrations.AddField(
-            model_name='homepage',
-            name='abc',
-            field=models.ManyToManyField(blank=True, related_name='homepage_abc', to=settings.AUTH_USER_MODEL),
+            model_name="homepage",
+            name="abc",
+            field=models.ManyToManyField(
+                blank=True, related_name="homepage_abc", to=settings.AUTH_USER_MODEL
+            ),
         ),
     ]
