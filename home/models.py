@@ -22,6 +22,7 @@ class CustomText(models.Model):
 
 
 class HomePage(models.Model):
+    abc = models.ManyToManyField("users.User", blank=True, related_name="homepage_abc",)
     gfgf = models.ForeignKey(
         "home.CustomText",
         null=True,
