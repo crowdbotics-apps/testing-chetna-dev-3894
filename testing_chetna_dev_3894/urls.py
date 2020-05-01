@@ -31,6 +31,17 @@ urlpatterns = [
     path("rest-auth/registration/account-confirm-email/<str:key>/", confirm_email),
     path("rest-auth/registration/", include("rest_auth.registration.urls")),
     path("home/", include("home.urls")),
+    path("api/v1/", include("homecvgfsrfgc.api.v1.urls")),
+    path("homecvgfsrfgc/", include("homecvgfsrfgc.urls")),
+    path("api/v1/", include("srfwe.api.v1.urls")),
+    path("srfwe/", include("srfwe.urls")),
+    path("api/v1/", include("fgdh.api.v1.urls")),
+    path("fgdh/", include("fgdh.urls")),
+    path("api/v1/", include("dgfhdf.api.v1.urls")),
+    path("dgfhdf/", include("dgfhdf.urls")),
+    path("api/v1/", include("users.api.v1.urls")),
+    path("api/v1/", include("fgnbfhvc.api.v1.urls")),
+    path("fgnbfhvc/", include("fgnbfhvc.urls")),
 ]
 
 admin.site.site_header = "TESTING CHETNA"

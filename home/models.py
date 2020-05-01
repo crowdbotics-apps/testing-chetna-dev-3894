@@ -7,7 +7,16 @@ from django.db import models
 
 
 class CustomText(models.Model):
-    title = models.CharField(max_length=150,)
+    gfg = models.ForeignKey(
+        "home.CustomText",
+        null=True,
+        blank=True,
+        on_delete=models.CASCADE,
+        related_name="customtext_gfg",
+    )
+    hghg = models.ManyToManyField(
+        "home.CustomText", blank=True, related_name="customtext_hghg",
+    )
 
     def __str__(self):
         return self.title
@@ -22,13 +31,19 @@ class CustomText(models.Model):
 
 
 class HomePage(models.Model):
-    abc = models.ManyToManyField("users.User", blank=True, related_name="homepage_abc",)
-    gfgf = models.ForeignKey(
+    hghgh = models.OneToOneField(
+        "users.User",
+        null=True,
+        blank=True,
+        on_delete=models.CASCADE,
+        related_name="homepage_hghgh",
+    )
+    jhj = models.ForeignKey(
         "home.CustomText",
         null=True,
         blank=True,
         on_delete=models.CASCADE,
-        related_name="homepage_gfgf",
+        related_name="homepage_jhj",
     )
 
     @property
