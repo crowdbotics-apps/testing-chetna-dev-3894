@@ -22,12 +22,11 @@ class CustomText(models.Model):
 
 
 class HomePage(models.Model):
-    abc = models.ManyToManyField("users.User", blank=True, related_name="homepage_abc",)
     gfgf = models.ForeignKey(
         "home.CustomText",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="homepage_gfgf",
     )
 
